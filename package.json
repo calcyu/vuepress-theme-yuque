@@ -1,0 +1,16 @@
+{
+  "name": "vuepress-theme-yuque",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "calcyu",
+  "license": "MIT",
+  "private": true,
+  "description": "a vuepress theme",
+  "scripts": {
+    "dev": "vuepress dev examples",
+    "build": "vuepress build examples"
+  },
+  "devDependencies": {
+    "vuepress": "^1.7.1"
+  }
+}
