@@ -6,9 +6,28 @@ $mobileSidebarWidth = $sidebarWidth * 0.82
 @media (max-width: $MQNarrow)
   .sidebar
     font-size 15px
+    border-right 1px solid $borderColor
     width $mobileSidebarWidth
+    transform: translateX(0)
+    .pinWraper
+        display: none
+    .sidebar-sub-headers
+      display: block
   .page
     padding-left $mobileSidebarWidth
+  .sidebar-mask
+      display: none
+  // .theme-container
+  //   &.sidebar-open
+  //     .page
+  //       padding-left $mobileSidebarWidth
+  //       // width: 100% - $mobileSidebarWidth
+  //       // transform translateX($mobileSidebarWidth)
+  //     .sidebar-mask
+  //       display: block
+
+    
+  
 
 // wide mobile
 @media (max-width: $MQMobile)
@@ -23,6 +42,10 @@ $mobileSidebarWidth = $sidebarWidth * 0.82
     &.sidebar-open
       .sidebar
         transform translateX(0)
+      .sidebar-mask
+        display block
+      .page
+        padding-left 0
     &.no-navbar
       .sidebar
         padding-top: 0

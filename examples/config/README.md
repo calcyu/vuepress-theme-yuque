@@ -1,5 +1,5 @@
 ---
-sidebar: true
+sidebar: auto
 ---
 
 # Config

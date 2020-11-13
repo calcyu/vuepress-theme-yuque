@@ -62,7 +62,7 @@ export default {
 
   data () {
     return {
-      isSidebarOpen: false
+      isSidebarOpen: !this.isMobile(),
     }
   },
 
@@ -117,7 +117,7 @@ export default {
 
   mounted () {
     this.$router.afterEach(() => {
-      this.isSidebarOpen = false
+        this.isSidebarOpen = !this.isMobile()
     })
   },
 
