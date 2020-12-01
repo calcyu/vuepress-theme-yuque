@@ -4,6 +4,8 @@ $mobileSidebarWidth = $sidebarWidth * 0.82
 
 // narrow desktop / iPad
 @media (max-width: $MQNarrow)
+  .sub-sidebar
+    display: none
   .sidebar
     font-size 15px
     border-right 1px solid $borderColor
@@ -15,6 +17,7 @@ $mobileSidebarWidth = $sidebarWidth * 0.82
       display: block
   .page
     padding-left $mobileSidebarWidth
+    padding-right 0
   .sidebar-mask
       display: none
   // .theme-container

@@ -12,8 +12,6 @@ module.exports = (options, ctx) => {
         .some(base => themeConfig.locales[base].algolia)
   )
 
-  const enableSmoothScroll = themeConfig.smoothScroll === true
-
   return {
     alias () {
       return {
@@ -53,7 +51,7 @@ module.exports = (options, ctx) => {
         before: info => `<details class="custom-block details">${info ? `<summary>${info}</summary>` : ''}\n`,
         after: () => '</details>\n'
       }],
-      ['smooth-scroll', enableSmoothScroll]
+      'smooth-scroll'
     ]
   }
 }

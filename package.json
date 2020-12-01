@@ -4,8 +4,7 @@
   "main": "index.js",
   "author": "calcyu",
   "license": "MIT",
-  "private": true,
-  "description": "a vuepress theme",
+  "description": "a YuQue style vuepress theme",
   "scripts": {
     "dev": "vuepress dev examples",
     "build": "vuepress build examples"

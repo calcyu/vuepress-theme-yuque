@@ -40,6 +40,7 @@
         <slot name="page-bottom" />
       </template>
     </Page>
+    <SubSidebar class="sub-sidebar"/>
   </div>
 </template>
 
@@ -48,6 +49,7 @@ import Home from '@theme/components/Home.vue'
 import Navbar from '@theme/components/Navbar.vue'
 import Page from '@theme/components/Page.vue'
 import Sidebar from '@theme/components/Sidebar.vue'
+import SubSidebar from '@theme/components/SubSidebar.vue'
 import { resolveSidebarItems } from '../util'
 
 export default {
@@ -57,12 +59,13 @@ export default {
     Home,
     Page,
     Sidebar,
-    Navbar
+    Navbar,
+    SubSidebar
   },
 
   data () {
     return {
-      isSidebarOpen: !this.isMobile(),
+      isSidebarOpen: true,
     }
   },
 
@@ -116,8 +119,13 @@ export default {
   },
 
   mounted () {
+    if(this.$isMobile){
+      this.isSidebarOpen = false
+    }
     this.$router.afterEach(() => {
-        this.isSidebarOpen = !this.isMobile()
+        if(this.$isMobile){
+          this.isSidebarOpen = false
+        }
     })
   },
 

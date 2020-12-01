@@ -39,17 +39,60 @@ module.exports = {
       },
       {
         text: 'Config',
-        link: '/config/'
+        link: '/config/',
+        icon: 'reco-npm'
       },
       {
         text: 'VuePress',
         link: 'https://v1.vuepress.vuejs.org'
+      },
+      {
+        text: 'Vue教程',
+        items:[
+          { text: 'api', link: '/vue/api/'},
+          { text: 'blog', link: '/vue/blog/'},
+        ]
+      },
+      {
+        text: 'VuePress',
+        items:[
+          { text: 'NPM', link: 'https://www.npmjs.com/~reco_luan', icon: 'reco-npm' },
+          { text: 'GitHub', link: 'https://github.com/recoluan', icon: 'reco-github' },
+          { text: '简书', link: 'https://www.jianshu.com/u/cd674a19515e', icon: 'reco-jianshu' },
+          { text: 'CSDN', link: 'https://blog.csdn.net/recoluan', icon: 'reco-csdn' },
+        ]
       }
     ],
     sidebar: {
       '/guide/': [
         {
           title: 'Guide',
+          collapsable: false,
+          children: [
+            '',
+            'using-vue',
+          ]
+        },
+        {
+          title: 'yyy1',
+          collapsable: false,
+          children: [
+            '',
+            'using-vue',
+          ]
+        }
+      ],
+      '/vue/api/': [
+        {
+          title: 'xxx1',
+          collapsable: false,
+          children: [
+            '',
+            'using-vue',
+          ]
+        },
+        {
+          title: 'xxx2',
           collapsable: false,
           children: [
             '',
